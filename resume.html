@@ -1,31 +1,71 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <title>Resume - Parikshith M</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="favicon.ico">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', sans-serif;
       padding: 40px;
-      background-color: #f9f9f9;
+      background-color: #121212;
+      color: #f1f1f1;
+    }
+    a {
+      color: #80cbc4;
     }
     .btn {
       display: inline-block;
       padding: 10px 20px;
-      background-color: #007acc;
+      background-color: #26a69a;
       color: white;
       text-decoration: none;
       border-radius: 5px;
       font-weight: bold;
+      transition: background-color 0.3s;
     }
     .btn:hover {
-      background-color: #005ea3;
+      background-color: #1d8e82;
+    }
+    nav {
+      margin-bottom: 30px;
+    }
+    nav a {
+      margin-right: 15px;
+      color: #80cbc4;
+      text-decoration: none;
     }
   </style>
 </head>
 <body>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="projects.html">Projects</a>
+    <a href="resume.html">Resume</a>
+    <a href="blog.html">Blog</a>
+  </nav>
+
   <h1>Resume</h1>
   <p>Click the button below to download my resume:</p>
   <a href="Parikshith_M_Resume.pdf" class="btn" download>📄 Download Resume</a>
-  <p style="margin-top: 30px;"><a href="index.html">← Back to Home</a></p>
+
+  <div style="margin-top: 50px;">
+    <h2>📫 Contact Me</h2>
+    <form action="https://formspree.io/f/moqzqzep" method="POST">
+      <p><input type="text" name="name" placeholder="Your Name" required style="width:100%; padding:10px; margin:5px 0;"></p>
+      <p><input type="email" name="_replyto" placeholder="Your Email" required style="width:100%; padding:10px; margin:5px 0;"></p>
+      <p><textarea name="message" rows="4" placeholder="Your Message" required style="width:100%; padding:10px; margin:5px 0;"></textarea></p>
+      <p><button type="submit" class="btn">Send</button></p>
+    </form>
+  </div>
 </body>
 </html>
