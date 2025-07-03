@@ -1,11 +1,70 @@
-
 <!DOCTYPE html>
-<html>
-<head><title>About Me - Parikshith M</title></head>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>About - Parikshith M</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="favicon.ico">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      padding: 40px;
+      background-color: #121212;
+      color: #f1f1f1;
+    }
+    a {
+      color: #80cbc4;
+    }
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #26a69a;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+    .btn:hover {
+      background-color: #1d8e82;
+    }
+    nav {
+      margin-bottom: 30px;
+    }
+    nav a {
+      margin-right: 15px;
+      color: #80cbc4;
+      text-decoration: none;
+    }
+    form input, form textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 5px 0;
+      border-radius: 5px;
+      border: none;
+    }
+  </style>
+</head>
 <body>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="projects.html">Projects</a>
+    <a href="resume.html">Resume</a>
+    <a href="blog.html">Blog</a>
+  </nav>
+
   <h1>About Me</h1>
   <p>I’m Parikshith, a business-minded AI enthusiast with a technical edge. With a foundation in Electronics and an MBA in Data Science & Marketing, I bring strategy and data together to drive innovation.</p>
   <p>I enjoy solving problems where business meets machine learning. Outside of work, I love traveling, music, and diving into new tech trends.</p>
-  <p><a href="index.html">Back to Home</a></p>
+
+  <div style="margin-top: 50px;">
+    <h2>📫 Contact Me</h2>
+    <form action="https://formspree.io/f/moqzqzep" method="POST">
+      <p><input type="text" name="name" placeholder="Your Name" required></p>
+      <p><input type="email" name="_replyto" placeholder="Your Email" required></p>
+      <p><textarea name="message" rows="4" placeholder="Your Message" required></textarea></p>
+      <p><button type="submit" class="btn">Send</button></p>
+    </form>
+  </div>
 </body>
 </html>
