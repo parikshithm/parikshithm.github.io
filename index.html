@@ -3,96 +3,75 @@
 <head>
   <meta charset="UTF-8">
   <title>Parikshith M — Bridging Business & Technology</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="favicon.ico">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
   <style>
-    body { font-family: 'Segoe UI', sans-serif; max-width: 900px; margin: auto; padding: 30px; line-height: 1.6; background: #f9f9f9; }
-    h1, h2 { color: #2c3e50; }
-    a { color: #007acc; text-decoration: none; }
-    .section { margin-top: 40px; }
-    .project, .job { margin-bottom: 20px; }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      padding: 40px;
+      background-color: #121212;
+      color: #f1f1f1;
+    }
+    a {
+      color: #80cbc4;
+    }
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #26a69a;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+    .btn:hover {
+      background-color: #1d8e82;
+    }
+    nav {
+      margin-bottom: 30px;
+    }
+    nav a {
+      margin-right: 15px;
+      color: #80cbc4;
+      text-decoration: none;
+    }
+    form input, form textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 5px 0;
+      border-radius: 5px;
+      border: none;
+    }
   </style>
 </head>
 <body>
-  <h1>👋 Hi, I’m Parikshith</h1><h2 style='color:#555;'>MBA Grad | Tech Optimist | Data-Driven Strategist</h2>
-  <p>
-    I’m a tech-savvy business strategist with a passion for AI and analytics. With 3+ years of experience across product development and data-driven decision making, I bridge the gap between technology and business. Whether it’s automating procurement with LLMs or optimizing SQL pipelines for Fortune 500 clients — I love solving real-world problems with smart data.
-  </p>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="projects.html">Projects</a>
+    <a href="resume.html">Resume</a>
+    <a href="blog.html">Blog</a>
+  </nav>
 
-  <div class="section">
-    <h2>🧠 Skills & Tools</h2>
-    <p><strong>Analytics:</strong> SQL, Python, Excel, Unix, Power BI, GIT, Kibana, Pandas</p>
-    <p><strong>ML/AI:</strong> Regression, Clustering, Neural Networks, GPT, LLaMA, Gemini, Phi-2</p>
-    <p><strong>Strategic Advisory:</strong> AI Use Case Discovery, ROI Analysis, Feasibility Assessment</p>
-    <p><strong>Cloud:</strong> AWS S3, CloudWatch | <strong>Tools:</strong> JIRA, Azure Dashboards</p>
-  </div>
+  <h1>👋 Hi, I’m Parikshith</h1>
+  <h2 style='color:#bbb;'>MBA Grad | Tech Optimist | Data-Driven Strategist</h2>
+  <p>I’m a tech-savvy business strategist with a passion for AI and analytics. With 3+ years of experience across product development and data-driven decision making, I bridge the gap between technology and business.</p>
 
-  <div class="section">
-    <h2>🚀 Projects</h2>
-    <div class="project">
-      <h3>LLM-AI Based Automation of Procurement — TransGlobal Industries</h3>
-      <p>Built an AI-powered WebApp (Streamlit, LangChain, FAISS, Gemini 1.5 Pro, Plotly) to automate procurement from RFP to negotiation.</p>
-      <ul>
-        <li>Automated RFP generation and vendor matching using historical data</li>
-        <li>Executed bid evaluations with interactive dashboards</li>
-        <li>Enabled BATNA-based negotiation and contract drafting</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="section">
-    <h2>💼 Work Experience</h2>
-
-    <div class="job">
-      <h3>Software Development Associate — Epsilon</h3>
-      <p><em>Aug 2022 – Apr 2024</em></p>
-      <ul>
-        <li>Improved SQL query efficiency, reducing daily run time by 15 minutes</li>
-        <li>Led team of 3 in a successful legacy-to-modern system migration</li>
-        <li>Collaborated with cross-functional teams to drive product decisions</li>
-      </ul>
-    </div>
-
-    <div class="job">
-      <h3>Application Development Associate — Accenture</h3>
-      <p><em>Dec 2020 – Aug 2022</em></p>
-      <ul>
-        <li>Drove tech strategy, achieving 15% faster rollouts</li>
-        <li>Led SQL initiatives, improving reporting by 20%</li>
-        <li>Used Agile/SDLC to ensure 95% on-time delivery</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="section">
-    <h2>🎓 Education</h2>
-    <p><strong>MBA</strong>, Data Science & Marketing – Great Lakes Institute of Management (2025)<br>
-    GPA: 3.31 / 4.00</p>
-    <p><strong>B.E.</strong>, Electronics & Communication – Siddaganga Institute of Technology (2020)<br>
-    GPA: 8.73 / 10.00</p>
-  </div>
-
-  <div class="section">
-    <h2>🏅 Achievements</h2>
-    <ul>
-      <li>4.0 in Statistics | Best Project Award at National Level Event</li>
-      <li>Finalist – Agri-Vision Case Challenge (MDI)</li>
-      <li>Top 11 – Car-O-Bar Challenge (IIM Rohtak)</li>
-      <li>Certificate of Appreciation – District Council</li>
-    </ul>
-  </div>
-
-  <div class="section">
+  <div style="margin-top: 50px;">
     <h2>📫 Contact Me</h2>
     <form action="https://formspree.io/f/moqzqzep" method="POST">
-      <p>Name: <input type="text" name="name" required></p>
-      <p>Email: <input type="email" name="_replyto" required></p>
-      <p>Message:<br><textarea name="message" rows="4" required></textarea></p>
-      <p><button type="submit">Send</button></p>
+      <p><input type="text" name="name" placeholder="Your Name" required></p>
+      <p><input type="email" name="_replyto" placeholder="Your Email" required></p>
+      <p><textarea name="message" rows="4" placeholder="Your Message" required></textarea></p>
+      <p><button type="submit" class="btn">Send</button></p>
     </form>
-    <p>Email: <a href="mailto:moudgalya.parikshith@gmail.com">moudgalya.parikshith@gmail.com</a></p>
-    <p>Phone: +91 9036930501</p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/parikshith-m-1aab631a7" target="_blank">parikshith-m</a></p>
-    <p>GitHub: <a href="https://github.com/parikshithm" target="_blank">parikshithm</a></p>
   </div>
 </body>
 </html>
