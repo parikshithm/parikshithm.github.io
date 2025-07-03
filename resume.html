@@ -1,31 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Resume - Parikshith M</title>
   <meta charset="UTF-8">
+  <title>Resume - Parikshith M</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="favicon.ico">
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-XXXXXXXXXX');
-  </script>
+  
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
       padding: 40px;
-      background-color: #121212;
+      background-color: #000000;
       color: #f1f1f1;
     }
     a {
-      color: #80cbc4;
+      color: #ff5252;
     }
     .btn {
       display: inline-block;
       padding: 10px 20px;
-      background-color: #26a69a;
+      background-color: #ff1744;
       color: white;
       text-decoration: none;
       border-radius: 5px;
@@ -33,17 +27,63 @@
       transition: background-color 0.3s;
     }
     .btn:hover {
-      background-color: #1d8e82;
+      background-color: #d50000;
     }
     nav {
       margin-bottom: 30px;
+      background-color: #121212;
+      padding: 15px 0;
+      text-align: center;
+      border-bottom: 2px solid #ff1744;
     }
     nav a {
-      margin-right: 15px;
-      color: #80cbc4;
+      display: inline-block;
+      margin: 0 20px;
+      color: #ff5252;
+      font-weight: bold;
+      font-size: 18px;
       text-decoration: none;
+      transition: color 0.3s, transform 0.3s;
+    }
+    nav a:hover,
+    nav a:focus {
+      color: #ffffff;
+      transform: scale(1.1);
+    }
+    form input, form textarea {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border-radius: 5px;
+      border: none;
+      font-size: 16px;
+    }
+    form input:focus,
+    form textarea:focus {
+      outline: 2px solid #ff5252;
+      background-color: #1c1c1c;
+      color: #fff;
+    }
+    .contact-section {
+      max-width: 600px;
+      margin: 50px auto;
+      background-color: #121212;
+      padding: 30px;
+      border-radius: 10px;
+    }
+    .contact-section h2 {
+      color: #ffffff;
+      margin-bottom: 20px;
+    }
+    .profile-img {
+      display: block;
+      margin: 30px auto;
+      max-width: 200px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(255,82,82,0.3);
     }
   </style>
+
 </head>
 <body>
   <nav>
@@ -53,18 +93,18 @@
     <a href="resume.html">Resume</a>
     <a href="blog.html">Blog</a>
   </nav>
-
+  
   <h1>Resume</h1>
   <p>Click the button below to download my resume:</p>
   <a href="Parikshith_M_Resume.pdf" class="btn" download>📄 Download Resume</a>
 
-  <div style="margin-top: 50px;">
+  <div class="contact-section">
     <h2>📫 Contact Me</h2>
     <form action="https://formspree.io/f/moqzqzep" method="POST">
-      <p><input type="text" name="name" placeholder="Your Name" required style="width:100%; padding:10px; margin:5px 0;"></p>
-      <p><input type="email" name="_replyto" placeholder="Your Email" required style="width:100%; padding:10px; margin:5px 0;"></p>
-      <p><textarea name="message" rows="4" placeholder="Your Message" required style="width:100%; padding:10px; margin:5px 0;"></textarea></p>
-      <p><button type="submit" class="btn">Send</button></p>
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="_replyto" placeholder="Your Email" required>
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn">Send</button>
     </form>
   </div>
 </body>

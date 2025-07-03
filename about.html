@@ -31,11 +31,24 @@
     }
     nav {
       margin-bottom: 30px;
+      background-color: #121212;
+      padding: 15px 0;
+      text-align: center;
+      border-bottom: 2px solid #ff1744;
     }
     nav a {
-      margin-right: 15px;
+      display: inline-block;
+      margin: 0 20px;
       color: #ff5252;
+      font-weight: bold;
+      font-size: 18px;
       text-decoration: none;
+      transition: color 0.3s, transform 0.3s;
+    }
+    nav a:hover,
+    nav a:focus {
+      color: #ffffff;
+      transform: scale(1.1);
     }
     form input, form textarea {
       width: 100%;
@@ -61,6 +74,13 @@
     .contact-section h2 {
       color: #ffffff;
       margin-bottom: 20px;
+    }
+    .profile-img {
+      display: block;
+      margin: 30px auto;
+      max-width: 200px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(255,82,82,0.3);
     }
   </style>
 
