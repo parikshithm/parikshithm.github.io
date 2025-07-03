@@ -5,44 +5,65 @@
   <title>Projects - Parikshith M</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="favicon.ico">
+  
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
       padding: 40px;
-      background-color: #121212;
+      background-color: #000000;
       color: #f1f1f1;
     }
     a {
-      color: #80cbc4;
+      color: #ff5252;
     }
     .btn {
       display: inline-block;
       padding: 10px 20px;
-      background-color: #26a69a;
+      background-color: #ff1744;
       color: white;
       text-decoration: none;
       border-radius: 5px;
       font-weight: bold;
+      transition: background-color 0.3s;
     }
     .btn:hover {
-      background-color: #1d8e82;
+      background-color: #d50000;
     }
     nav {
       margin-bottom: 30px;
     }
     nav a {
       margin-right: 15px;
-      color: #80cbc4;
+      color: #ff5252;
       text-decoration: none;
     }
     form input, form textarea {
       width: 100%;
-      padding: 10px;
-      margin: 5px 0;
+      padding: 12px;
+      margin: 10px 0;
       border-radius: 5px;
       border: none;
+      font-size: 16px;
+    }
+    form input:focus,
+    form textarea:focus {
+      outline: 2px solid #ff5252;
+      background-color: #1c1c1c;
+      color: #fff;
+    }
+    .contact-section {
+      max-width: 600px;
+      margin: 50px auto;
+      background-color: #121212;
+      padding: 30px;
+      border-radius: 10px;
+    }
+    .contact-section h2 {
+      color: #ffffff;
+      margin-bottom: 20px;
     }
   </style>
+
 </head>
 <body>
   <nav>
@@ -52,7 +73,7 @@
     <a href="resume.html">Resume</a>
     <a href="blog.html">Blog</a>
   </nav>
-
+  
   <h1>Projects</h1>
   <h3>LLM-AI Based Automation of Procurement — TransGlobal Industries</h3>
   <ul>
@@ -61,13 +82,13 @@
     <li>Enabled BATNA-based negotiation and contract drafting</li>
   </ul>
 
-  <div style="margin-top: 50px;">
+  <div class="contact-section">
     <h2>📫 Contact Me</h2>
     <form action="https://formspree.io/f/moqzqzep" method="POST">
-      <p><input type="text" name="name" placeholder="Your Name" required></p>
-      <p><input type="email" name="_replyto" placeholder="Your Email" required></p>
-      <p><textarea name="message" rows="4" placeholder="Your Message" required></textarea></p>
-      <p><button type="submit" class="btn">Send</button></p>
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="_replyto" placeholder="Your Email" required>
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn">Send</button>
     </form>
   </div>
 </body>
