@@ -50,57 +50,75 @@
       color: #ffffff;
       transform: scale(1.1);
     }
-    form input, form textarea {
-      width: 100%;
-      padding: 12px;
-      margin: 10px 0;
-      border-radius: 5px;
-      border: none;
-      font-size: 16px;
+    details {
+      background-color: #1a1a1a;
+      padding: 15px;
+      margin: 20px 0;
+      border-radius: 8px;
+      border-left: 4px solid #ff5252;
     }
-    form input:focus,
-    form textarea:focus {
-      outline: 2px solid #ff5252;
-      background-color: #1c1c1c;
-      color: #fff;
+    summary {
+      font-size: 18px;
+      font-weight: bold;
+      cursor: pointer;
+      color: #ff5252;
     }
-    .contact-section {
-      max-width: 600px;
-      margin: 50px auto;
-      background-color: #121212;
-      padding: 30px;
-      border-radius: 10px;
-    }
-    .contact-section h2 {
+    summary:hover {
       color: #ffffff;
-      margin-bottom: 20px;
     }
-    .profile-img {
-      display: block;
-      margin: 30px auto;
-      max-width: 200px;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(255,82,82,0.3);
+    ul {
+      margin-top: 10px;
+      line-height: 1.8;
     }
   </style>
-
 </head>
 <body>
 <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="projects.html">Projects</a>
-    <a href="resume.html">Resume</a>
-    <a href="blog.html">Blog</a>
-  </nav>
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="projects.html">Projects</a>
+  <a href="resume.html">Resume</a>
+  <a href="blog.html">Blog</a>
+</nav>
 <div class="content">
 
   <h1>Projects</h1>
-  <ul>
-    <li>📊 Data Dashboard for Retail Insights</li>
-    <li>🤖 AI Chatbot for Lead Generation</li>
-    <li>📱 Wedding Services Mobile App (Flutter + Firebase)</li>
-  </ul>
+
+  <details>
+    <summary>📊 Data Dashboard for Retail Insights</summary>
+    <ul>
+      <li>Retail sales and inventory dashboard for a chain of stores</li>
+      <li>Built with Power BI, Excel, SQL</li>
+    </ul>
+  </details>
+
+  <details>
+    <summary>🤖 AI Chatbot for Lead Generation</summary>
+    <ul>
+      <li>Developed a conversational AI chatbot for website lead capture</li>
+      <li>Built using Dialogflow + Firebase + CRM integration</li>
+    </ul>
+  </details>
+
+  <details>
+    <summary>📱 Wedding Services Mobile App (Flutter + Firebase)</summary>
+    <ul>
+      <li>Platform connecting customers with wedding service providers</li>
+      <li>Developed with Flutter and Firebase backend</li>
+    </ul>
+  </details>
+
+  <details open>
+    <summary>📈 Funnel Analysis of Google Merchandise Store</summary>
+    <ul>
+      <li><a href="Projects/Funnel_Analysis/Funnel Analysis of Google Merchandise store.pdf" target="_blank">📄 PDF Report</a></li>
+      <li><a href="Projects/Funnel_Analysis/Funnel analysis.pbix" target="_blank">📊 Power BI File</a></li>
+      <li><a href="Projects/Funnel_Analysis/Product_Funnel_Analysis.ipynb" target="_blank">📓 Jupyter Notebook</a></li>
+      <li><a href="Projects/Funnel_Analysis/category_funnel.csv" target="_blank">📂 Category Funnel CSV</a></li>
+      <li><a href="Projects/Funnel_Analysis/overall_funnel.csv" target="_blank">📂 Overall Funnel CSV</a></li>
+      <li><a href="Projects/Funnel_Analysis/Funnel_Analysis_Google_Store.png" target="_blank">🖼️ Dashboard Snapshot</a></li>
+    </ul>
+  </details>
 
 </div>
 </body>
