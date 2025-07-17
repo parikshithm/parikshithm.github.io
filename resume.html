@@ -9,13 +9,47 @@
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
-      padding: 40px;
-      background-color: #000000;
+      margin: 0;
+      padding: 0;
+      background-color: #000;
       color: #f1f1f1;
     }
+
+    nav {
+      background-color: #121212;
+      padding: 15px 0;
+      text-align: center;
+      border-bottom: 2px solid #ff1744;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    nav a {
+      color: #ff5252;
+      font-weight: bold;
+      font-size: 18px;
+      margin: 10px 20px;
+      text-decoration: none;
+      transition: color 0.3s, transform 0.3s;
+    }
+
+    nav a:hover {
+      color: #ffffff;
+      transform: scale(1.1);
+    }
+
+    .content {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0 20px;
+      text-align: center;
+    }
+
     a {
       color: #ff5252;
     }
+
     .btn {
       display: inline-block;
       padding: 10px 20px;
@@ -25,67 +59,70 @@
       border-radius: 5px;
       font-weight: bold;
       transition: background-color 0.3s;
+      margin-top: 10px;
     }
+
     .btn:hover {
       background-color: #d50000;
     }
-    nav {
-      margin-bottom: 30px;
+
+    .contact-section {
+      max-width: 600px;
+      margin: 60px auto 40px;
       background-color: #121212;
-      padding: 15px 0;
-      text-align: center;
-      border-bottom: 2px solid #ff1744;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(255,82,82,0.1);
     }
-    nav a {
-      display: inline-block;
-      margin: 0 20px;
-      color: #ff5252;
-      font-weight: bold;
-      font-size: 18px;
-      text-decoration: none;
-      transition: color 0.3s, transform 0.3s;
-    }
-    nav a:hover,
-    nav a:focus {
+
+    .contact-section h2 {
       color: #ffffff;
-      transform: scale(1.1);
+      margin-bottom: 20px;
     }
-    form input, form textarea {
+
+    form input,
+    form textarea {
       width: 100%;
       padding: 12px;
       margin: 10px 0;
       border-radius: 5px;
       border: none;
       font-size: 16px;
-    }
-    form input:focus,
-    form textarea:focus {
-      outline: 2px solid #ff5252;
       background-color: #1c1c1c;
       color: #fff;
     }
-    .contact-section {
-      max-width: 600px;
-      margin: 50px auto;
-      background-color: #121212;
-      padding: 30px;
-      border-radius: 10px;
+
+    form input:focus,
+    form textarea:focus {
+      outline: 2px solid #ff5252;
     }
-    .contact-section h2 {
-      color: #ffffff;
-      margin-bottom: 20px;
+
+    button.btn {
+      cursor: pointer;
     }
-    .profile-img {
-      display: block;
-      margin: 30px auto;
-      max-width: 200px;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(255,82,82,0.3);
+
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+      }
+
+      nav a {
+        margin: 8px 0;
+        font-size: 17px;
+      }
+
+      .content {
+        padding: 30px 15px;
+      }
+
+      .contact-section {
+        margin: 40px 15px;
+      }
     }
   </style>
-
 </head>
 <body>
+
   <nav>
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
@@ -93,10 +130,12 @@
     <a href="resume.html">Resume</a>
     <a href="blog.html">Blog</a>
   </nav>
-  
-  <h1>Resume</h1>
-  <p>Click the button below to download my resume:</p>
-  <a href="Parikshith_M_Resume.pdf" class="btn" download>📄 Download Resume</a>
+
+  <div class="content">
+    <h1>📄 Resume</h1>
+    <p>Click the button below to download my resume:</p>
+    <a href="Parikshith_M_Resume.pdf" class="btn" download>Download Resume</a>
+  </div>
 
   <div class="contact-section">
     <h2>📫 Contact Me</h2>
@@ -107,5 +146,6 @@
       <button type="submit" class="btn">Send</button>
     </form>
   </div>
+
 </body>
 </html>
