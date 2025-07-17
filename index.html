@@ -14,38 +14,46 @@
       background-color: #000;
       color: #f1f1f1;
     }
+
     nav {
       background-color: #121212;
       padding: 15px 0;
       text-align: center;
       border-bottom: 2px solid #ff1744;
+      display: flex;
       flex-wrap: wrap;
+      justify-content: center;
     }
+
     nav a {
-      margin: 0 15px;
       color: #ff5252;
       font-weight: bold;
-      font-size: 16px;
+      font-size: 18px;
+      margin: 10px 20px;
       text-decoration: none;
       transition: color 0.3s, transform 0.3s;
-      display: inline-block;
     }
-    nav a:hover {
+
+    nav a:hover,
+    nav a:focus {
       color: #ffffff;
       transform: scale(1.1);
     }
+
     .container {
       max-width: 800px;
       margin: auto;
       padding: 40px 20px;
       text-align: center;
     }
+
     .profile-img {
-      width: 150px;
+      width: 160px;
       border-radius: 12px;
       margin-top: 20px;
       box-shadow: 0 4px 12px rgba(255,82,82,0.3);
     }
+
     .contact {
       margin-top: 20px;
       font-size: 16px;
@@ -53,12 +61,22 @@
     }
 
     @media (max-width: 600px) {
-      nav a {
-        display: block;
-        margin: 10px 0;
+      nav {
+        flex-direction: column;
+        align-items: center;
       }
+
+      nav a {
+        margin: 8px 0;
+        font-size: 17px;
+      }
+
       .container {
         padding: 30px 15px;
+      }
+
+      .profile-img {
+        width: 130px;
       }
     }
   </style>
