@@ -9,70 +9,65 @@
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
-      margin: 0;
-      padding: 0;
+      padding: 40px;
       background-color: #000000;
       color: #f1f1f1;
     }
+    a {
+      color: #ff5252;
+    }
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #ff1744;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+    .btn:hover {
+      background-color: #d50000;
+    }
 
+    /* ✅ Responsive Navigation - Updated */
     nav {
       background-color: #121212;
       padding: 15px 0;
-      text-align: center;
       border-bottom: 2px solid #ff1744;
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
+      gap: 15px;
     }
-
     nav a {
       color: #ff5252;
       font-weight: bold;
       font-size: 18px;
-      margin: 10px 20px;
       text-decoration: none;
       transition: color 0.3s, transform 0.3s;
     }
-
     nav a:hover,
     nav a:focus {
       color: #ffffff;
       transform: scale(1.1);
     }
 
-    .content {
-      max-width: 800px;
-      margin: 60px auto;
-      padding: 0 20px;
-      text-align: center;
+    .contact-section {
+      max-width: 600px;
+      margin: 50px auto;
+      background-color: #121212;
+      padding: 30px;
+      border-radius: 10px;
     }
-
-    h1 {
-      font-size: 32px;
-      color: #ff7979;
-    }
-
-    p {
-      font-size: 18px;
-      color: #dddddd;
-      margin-top: 20px;
-    }
-
-    @media (max-width: 600px) {
-      nav a {
-        display: block;
-        margin: 8px 0;
-      }
-
-      .content {
-        padding: 30px 15px;
-        margin-top: 40px;
-      }
+    .contact-section h2 {
+      color: #ffffff;
+      margin-bottom: 20px;
     }
   </style>
 </head>
-<body>
 
+<body>
   <nav>
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
@@ -85,6 +80,5 @@
     <h1>📝 Blog</h1>
     <p>Coming soon! I’ll be sharing thoughts on AI, analytics, and real-world business challenges — stay tuned.</p>
   </div>
-
 </body>
 </html>
