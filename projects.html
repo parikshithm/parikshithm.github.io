@@ -5,74 +5,93 @@
   <title>Projects - Parikshith M</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="favicon.ico">
-  
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
-      padding: 40px;
-      background-color: #000000;
+      margin: 0;
+      padding: 0 20px;
+      background-color: #000;
       color: #f1f1f1;
     }
-    a {
-      color: #ff5252;
-    }
-    .btn {
-      display: inline-block;
-      padding: 10px 20px;
-      background-color: #ff1744;
-      color: white;
-      text-decoration: none;
-      border-radius: 5px;
-      font-weight: bold;
-      transition: background-color 0.3s;
-    }
-    .btn:hover {
-      background-color: #d50000;
-    }
+
     nav {
-      margin-bottom: 30px;
       background-color: #121212;
       padding: 15px 0;
       text-align: center;
       border-bottom: 2px solid #ff1744;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
     }
+
     nav a {
-      display: inline-block;
-      margin: 0 20px;
       color: #ff5252;
       font-weight: bold;
       font-size: 18px;
+      margin: 10px 20px;
       text-decoration: none;
       transition: color 0.3s, transform 0.3s;
     }
-    nav a:hover,
-    nav a:focus {
+
+    nav a:hover {
       color: #ffffff;
       transform: scale(1.1);
     }
+
+    .content {
+      max-width: 900px;
+      margin: auto;
+      padding-top: 30px;
+    }
+
+    a {
+      color: #ff5252;
+    }
+
     details {
       background-color: #1a1a1a;
       padding: 15px;
       margin: 20px 0;
       border-radius: 8px;
       border-left: 4px solid #ff5252;
+      animation: slideIn 0.4s ease-in-out;
     }
+
     summary {
       font-size: 18px;
       font-weight: bold;
       cursor: pointer;
       color: #ff5252;
     }
+
     summary:hover {
       color: #ffffff;
     }
+
     ul {
       margin-top: 10px;
       line-height: 1.8;
     }
+
+    @keyframes slideIn {
+      0% { opacity: 0; transform: translateX(-15px); }
+      100% { opacity: 1; transform: translateX(0); }
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+      }
+
+      nav a {
+        margin: 8px 0;
+        font-size: 17px;
+      }
+    }
   </style>
 </head>
 <body>
+
 <nav>
   <a href="index.html">Home</a>
   <a href="about.html">About</a>
@@ -80,8 +99,8 @@
   <a href="resume.html">Resume</a>
   <a href="blog.html">Blog</a>
 </nav>
-<div class="content">
 
+<div class="content">
   <h1>Projects</h1>
 
   <details>
