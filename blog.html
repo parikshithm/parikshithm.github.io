@@ -5,17 +5,45 @@
   <title>Blog - Parikshith M</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="favicon.ico">
-
+  
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
       padding: 40px;
       background-color: #000000;
       color: #f1f1f1;
+      margin: 0;
     }
+
     a {
       color: #ff5252;
     }
+
+    nav {
+      background-color: #121212;
+      padding: 15px 0;
+      text-align: center;
+      border-bottom: 2px solid #ff1744;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      margin: 0 20px;
+      color: #ff5252;
+      font-weight: bold;
+      font-size: 18px;
+      text-decoration: none;
+      transition: color 0.3s, transform 0.3s;
+    }
+
+    nav a:hover,
+    nav a:focus {
+      color: #ffffff;
+      transform: scale(1.1);
+    }
+
     .btn {
       display: inline-block;
       padding: 10px 20px;
@@ -26,31 +54,9 @@
       font-weight: bold;
       transition: background-color 0.3s;
     }
+
     .btn:hover {
       background-color: #d50000;
-    }
-
-    /* ✅ Responsive Navigation - Updated */
-    nav {
-      background-color: #121212;
-      padding: 15px 0;
-      border-bottom: 2px solid #ff1744;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 15px;
-    }
-    nav a {
-      color: #ff5252;
-      font-weight: bold;
-      font-size: 18px;
-      text-decoration: none;
-      transition: color 0.3s, transform 0.3s;
-    }
-    nav a:hover,
-    nav a:focus {
-      color: #ffffff;
-      transform: scale(1.1);
     }
 
     .contact-section {
@@ -60,25 +66,15 @@
       padding: 30px;
       border-radius: 10px;
     }
+
     .contact-section h2 {
       color: #ffffff;
       margin-bottom: 20px;
     }
-  </style>
-</head>
 
-<body>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="projects.html">Projects</a>
-    <a href="resume.html">Resume</a>
-    <a href="blog.html">Blog</a>
-  </nav>
-
-  <div class="content">
-    <h1>📝 Blog</h1>
-    <p>Coming soon! I’ll be sharing thoughts on AI, analytics, and real-world business challenges — stay tuned.</p>
-  </div>
-</body>
-</html>
+    .profile-img {
+      display: block;
+      margin: 30px auto;
+      max-width: 200px;
+      border-radius: 10px;
+      box-shado
