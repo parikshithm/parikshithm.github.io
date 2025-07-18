@@ -22,14 +22,18 @@
 
     .nav-container {
       display: flex;
-      justify-content: flex-end;
+      justify-content: center;
       align-items: center;
+      flex-wrap: wrap;
       padding: 15px 20px;
+      position: relative;
     }
 
     .nav-links {
       display: flex;
       gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
     }
 
     .nav-links a {
@@ -49,6 +53,9 @@
       display: none;
       flex-direction: column;
       cursor: pointer;
+      position: absolute;
+      right: 20px;
+      top: 18px;
     }
 
     .menu-toggle span {
@@ -118,23 +125,20 @@
     }
 
     @media (max-width: 768px) {
+      .menu-toggle {
+        display: flex;
+      }
+
       .nav-links {
         display: none;
         flex-direction: column;
         width: 100%;
         background-color: #121212;
-        position: absolute;
-        top: 60px;
-        left: 0;
+        margin-top: 15px;
       }
 
       .nav-links.active {
         display: flex;
-      }
-
-      .menu-toggle {
-        display: flex;
-        margin-left: auto;
       }
     }
   </style>
@@ -169,15 +173,4 @@
     <input type="text" name="name" placeholder="Your Name" required>
     <input type="email" name="_replyto" placeholder="Your Email" required>
     <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-    <button type="submit" class="btn">Send</button>
-  </form>
-</div>
-
-<script>
-  function toggleMenu() {
-    document.getElementById('navLinks').classList.toggle('active');
-  }
-</script>
-
-</body>
-</html>
+    <button type="submit" class="btn">S
