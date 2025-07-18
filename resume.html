@@ -7,10 +7,6 @@
   <link rel="icon" href="favicon.ico">
 
   <style>
-    * {
-      box-sizing: border-box;
-    }
-
     body {
       font-family: 'Segoe UI', sans-serif;
       margin: 0;
@@ -20,24 +16,26 @@
     }
 
     nav {
-      background-color: #121212;
-      border-bottom: 2px solid #ff1744;
-      height: 60px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: relative;
-    }
+  background-color: #121212;
+  border-bottom: 2px solid #ff1744;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
 
     .menu-toggle {
-      display: none;
-      flex-direction: column;
-      cursor: pointer;
-      position: absolute;
-      left: 20px;
-      top: 50%;
-      transform: translateY(-50%);
-    }
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
 
     .menu-toggle span {
       height: 3px;
@@ -60,6 +58,7 @@
       text-decoration: none;
       transition: color 0.3s, transform 0.3s;
     }
+
 
     .nav-links a:hover {
       color: #ffffff;
@@ -96,14 +95,6 @@
       padding: 30px;
       border-radius: 10px;
       box-shadow: 0 4px 12px rgba(255,82,82,0.1);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .contact-section form {
-      width: 100%;
-      max-width: 500px;
     }
 
     .contact-section h2 {
@@ -133,37 +124,38 @@
     }
 
     @media (max-width: 768px) {
-      nav {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 15px 20px;
-      }
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px 20px;
+  }
 
-      .menu-toggle {
-        display: flex;
-        z-index: 2;
-      }
+  .menu-toggle {
+    display: flex;
+    z-index: 2;
+  }
 
-      .nav-links {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 58px;
-        left: 0;
-        width: 100%;
-        background-color: #121212;
-        padding: 10px 20px;
-        z-index: 1;
-      }
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 58px;
+    left: 0;
+    width: 100%;
+    background-color: #121212;
+    padding: 10px 20px;
+    z-index: 1;
+  }
 
-      .nav-links.active {
-        display: flex;
-      }
+  .nav-links.active {
+    display: flex;
+  }
 
-      .nav-links a {
-        margin: 10px 0;
-      }
-    }
+  .nav-links a {
+    margin: 10px 0;
+  }
+}
+
   </style>
 </head>
 <body>
