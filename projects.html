@@ -14,6 +14,7 @@
       color: #f1f1f1;
     }
 
+    /* Navigation styles */
     nav {
       background-color: #121212;
       padding: 15px 20px;
@@ -21,18 +22,20 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      position: relative;
+      flex-wrap: wrap;
     }
 
     .nav-links {
       display: flex;
-      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
     }
 
     .nav-links a {
       color: #ff5252;
       font-weight: bold;
       font-size: 18px;
+      margin: 10px 20px;
       text-decoration: none;
       transition: color 0.3s, transform 0.3s;
     }
@@ -44,15 +47,11 @@
 
     .hamburger {
       display: none;
-      flex-direction: column;
-      gap: 5px;
+      font-size: 26px;
+      background: none;
+      border: none;
+      color: #ff5252;
       cursor: pointer;
-    }
-
-    .hamburger div {
-      width: 25px;
-      height: 3px;
-      background-color: #ff5252;
     }
 
     .content {
@@ -96,30 +95,22 @@
     }
 
     @media (max-width: 600px) {
-      .hamburger {
-        display: flex;
-      }
-
       .nav-links {
-        display: none;
         flex-direction: column;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        right: 0;
-        background-color: #121212;
-        padding: 15px 0;
-        border-top: 1px solid #ff1744;
-        z-index: 1000;
-      }
-
-      .nav-links.show {
-        display: flex;
+        width: 100%;
+        display: none;
       }
 
       .nav-links a {
         margin: 10px 0;
-        font-size: 17px;
+      }
+
+      .hamburger {
+        display: block;
+      }
+
+      .nav-links.show {
+        display: flex;
       }
     }
   </style>
@@ -127,12 +118,8 @@
 <body>
 
 <nav>
-  <div class="hamburger" onclick="toggleMenu()">
-    <div></div>
-    <div></div>
-    <div></div>
-  </div>
-  <div class="nav-links" id="navLinks">
+  <button class="hamburger" onclick="toggleMenu()">☰</button>
+  <div class="nav-links" id="navMenu">
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
     <a href="projects.html">Projects</a>
@@ -180,12 +167,11 @@
       <li><a href="Projects/Funnel_Analysis/Funnel_Analysis_Google_Store.png" target="_blank">🖼️ Dashboard Snapshot</a></li>
     </ul>
   </details>
-
 </div>
 
 <script>
   function toggleMenu() {
-    const nav = document.getElementById("navLinks");
+    const nav = document.getElementById("navMenu");
     nav.classList.toggle("show");
   }
 </script>
