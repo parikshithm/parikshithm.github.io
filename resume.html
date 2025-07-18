@@ -5,7 +5,7 @@
   <title>Resume - Parikshith M</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="favicon.ico">
-  
+
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
@@ -17,26 +17,43 @@
 
     nav {
       background-color: #121212;
-      padding: 15px 0;
-      text-align: center;
+      padding: 15px 20px;
       border-bottom: 2px solid #ff1744;
       display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
     }
 
-    nav a {
+    .nav-links {
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-links a {
       color: #ff5252;
       font-weight: bold;
       font-size: 18px;
-      margin: 10px 20px;
       text-decoration: none;
       transition: color 0.3s, transform 0.3s;
     }
 
-    nav a:hover {
+    .nav-links a:hover {
       color: #ffffff;
       transform: scale(1.1);
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+    }
+
+    .hamburger div {
+      width: 25px;
+      height: 3px;
+      background-color: #ff5252;
     }
 
     .content {
@@ -102,21 +119,30 @@
     }
 
     @media (max-width: 600px) {
-      nav {
+      .hamburger {
+        display: flex;
+      }
+
+      .nav-links {
+        display: none;
         flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background-color: #121212;
+        padding: 15px 0;
+        border-top: 1px solid #ff1744;
+        z-index: 1000;
       }
 
-      nav a {
-        margin: 8px 0;
+      .nav-links.show {
+        display: flex;
+      }
+
+      .nav-links a {
+        margin: 10px 0;
         font-size: 17px;
-      }
-
-      .content {
-        padding: 30px 15px;
-      }
-
-      .contact-section {
-        margin: 40px 15px;
       }
     }
   </style>
@@ -124,11 +150,18 @@
 <body>
 
   <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="projects.html">Projects</a>
-    <a href="resume.html">Resume</a>
-    <!-- <a href="blog.html">Blog</a> -->
+    <div class="hamburger" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="resume.html">Resume</a>
+      <!-- <a href="blog.html">Blog</a> -->
+    </div>
   </nav>
 
   <div class="content">
@@ -146,6 +179,13 @@
       <button type="submit" class="btn">Send</button>
     </form>
   </div>
+
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById("navLinks");
+      nav.classList.toggle("show");
+    }
+  </script>
 
 </body>
 </html>
