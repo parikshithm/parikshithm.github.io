@@ -5,7 +5,6 @@
   <title>About - Parikshith M</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="favicon.ico">
-
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
@@ -15,56 +14,44 @@
       color: #f1f1f1;
     }
 
-    nav {
+    .navbar {
       background-color: #121212;
-      padding: 15px 20px;
       border-bottom: 2px solid #ff1744;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+      padding: 15px;
       position: relative;
     }
 
-    .nav-links {
-      display: flex;
-      gap: 20px;
+    .navbar .menu-icon {
+      display: none;
+      font-size: 26px;
+      color: #ff5252;
+      cursor: pointer;
     }
 
-    .nav-links a {
+    .navbar-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .navbar-links a {
       color: #ff5252;
       font-weight: bold;
       font-size: 18px;
+      margin: 10px 20px;
       text-decoration: none;
       transition: color 0.3s, transform 0.3s;
     }
 
-    .nav-links a:hover,
-    .nav-links a:focus {
+    .navbar-links a:hover {
       color: #ffffff;
       transform: scale(1.1);
-    }
-
-    .hamburger {
-      display: none;
-      flex-direction: column;
-      gap: 5px;
-      cursor: pointer;
-    }
-
-    .hamburger div {
-      width: 25px;
-      height: 3px;
-      background-color: #ff5252;
     }
 
     .content {
       max-width: 800px;
       margin: auto;
       padding-top: 30px;
-    }
-
-    a {
-      color: #ff5252;
     }
 
     img, video {
@@ -103,116 +90,98 @@
     }
 
     @media (max-width: 768px) {
-      .hamburger {
-        display: flex;
-      }
-
-      .nav-links {
+      .navbar-links {
         display: none;
         flex-direction: column;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        right: 0;
-        background-color: #121212;
-        padding: 15px 0;
-        border-top: 1px solid #ff1744;
-        z-index: 1000;
+        align-items: center;
       }
 
-      .nav-links.show {
+      .navbar .menu-icon {
+        display: block;
+        position: absolute;
+        top: 18px;
+        right: 20px;
+      }
+
+      .navbar-links.show {
         display: flex;
       }
 
-      .nav-links a {
+      .navbar-links a {
         margin: 10px 0;
-        font-size: 17px;
-      }
-
-      img, video {
-        max-width: 100%;
       }
     }
   </style>
 </head>
 <body>
-
-<nav>
-  <div class="hamburger" onclick="toggleMenu()">
-    <div></div>
-    <div></div>
-    <div></div>
+  <div class="navbar">
+    <span class="menu-icon" onclick="toggleMenu()">☰</span>
+    <div class="navbar-links" id="navbarLinks">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="resume.html">Resume</a>
+      <!-- <a href="blog.html">Blog</a> -->
+    </div>
   </div>
-  <div class="nav-links" id="navLinks">
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="projects.html">Projects</a>
-    <a href="resume.html">Resume</a>
-    <!-- <a href="blog.html">Blog</a> -->
+
+  <div class="content">
+    <h1>About Me</h1>
+    <p>I’m a tech-savvy MBA graduate passionate about solving business problems using data, strategy, and smart technology.
+    I’m also a fitness enthusiast who spends free time engaging in sports and creative hobbies.</p>
+
+    <details>
+      <summary>🎓 Education</summary>
+      <p><strong>MBA</strong> — Great Lakes Institute of Management, Chennai (Data Science & Marketing)</p>
+      <p><strong>B.E.</strong> — Siddaganga Institute of Technology, Tumkur (Electronics and Communication)</p>
+    </details>
+
+    <details>
+      <summary>♟️ Chess Enthusiast</summary>
+      <p>I love the game of strategy. Whether opening with the Queen's Gambit or defending a drawn-out endgame, chess sharpens my thinking.</p>
+      <p>Check out my profile: <a href="https://www.chess.com/member/pari11" target="_blank">chess.com/pari11</a></p>
+    </details>
+
+    <details>
+      <summary>🏏 Cricket Club Player</summary>
+      <p>Weekend warrior with a straight drive to admire! I play for a local cricket club that brings friends, fun, and fierce competition together.</p>
+      <p>Follow my team on Instagram: <a href="https://www.instagram.com/united_engineers_cricket_club/" target="_blank">@united_engineers_cricket_club</a></p>
+    </details>
+
+    <details>
+      <summary>🏓 Pickleball Addict</summary>
+      <p>Fast, fun, and always a smash! Pickleball is my latest addiction — here are some action shots of me on the court.</p>
+      <img src="About_me/pickleball1.jpg" alt="Pickleball photo 1">
+      <video controls>
+        <source src="About_me/pickleball2.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </details>
+
+    <details>
+      <summary>🏸 Badminton Hustler</summary>
+      <p>Catch me diving across courts and smashing with precision. Here's my profile on Playo to connect for a match!</p>
+      <p><a href="https://playo.co/profile/8625e805-7084-4032-8793-17e028ef1648" target="_blank">Playo Profile</a></p>
+    </details>
+
+    <details>
+      <summary>🎶 Music and Keys</summary>
+      <p>I unwind with melodies. From film songs to fusion covers — here’s a clip of me on the keyboard!</p>
+      <p><a href="https://www.instagram.com/reel/YOUR_REEL_ID/" target="_blank">Watch on Instagram 🎹</a></p>
+    </details>
+
+    <details>
+      <summary>🏆 Favourite Sports Team</summary>
+      <p>RCB fan forever — and finally, they’ve done it!</p>
+      <img src="About_me/rcb_champions.jpg" alt="RCB lifting trophy">
+      <p style="font-style: italic; color: #ff7979;">"Ee sala cup namde… and this time, it's for real! 🏆🔥"</p>
+    </details>
   </div>
-</nav>
 
-<div class="content">
-  <h1>About Me</h1>
-  <p>
-    I’m a tech-savvy MBA graduate passionate about solving business problems using data, strategy, and smart technology.
-    I’m also a fitness enthusiast who spends free time engaging in sports and creative hobbies.
-  </p>
-
-  <details>
-    <summary>🎓 Education</summary>
-    <p><strong>MBA</strong> — Great Lakes Institute of Management, Chennai (Data Science & Marketing)</p>
-    <p><strong>B.E.</strong> — Siddaganga Institute of Technology, Tumkur (Electronics and Communication)</p>
-  </details>
-
-  <details>
-    <summary>♟️ Chess Enthusiast</summary>
-    <p>I love the game of strategy. Whether opening with the Queen's Gambit or defending a drawn-out endgame, chess sharpens my thinking.</p>
-    <p>Check out my profile: <a href="https://www.chess.com/member/pari11" target="_blank">chess.com/pari11</a></p>
-  </details>
-
-  <details>
-    <summary>🏏 Cricket Club Player</summary>
-    <p>Weekend warrior with a straight drive to admire! I play for a local cricket club that brings friends, fun, and fierce competition together.</p>
-    <p>Follow my team on Instagram: <a href="https://www.instagram.com/united_engineers_cricket_club/" target="_blank">@united_engineers_cricket_club</a></p>
-  </details>
-
-  <details>
-    <summary>🏓 Pickleball Addict</summary>
-    <p>Fast, fun, and always a smash! Pickleball is my latest addiction — here are some action shots of me on the court.</p>
-    <img src="About_me/pickleball1.jpg" alt="Pickleball photo 1">
-    <video controls>
-      <source src="About_me/pickleball2.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-  </details>
-
-  <details>
-    <summary>🏸 Badminton Hustler</summary>
-    <p>Catch me diving across courts and smashing with precision. Here's my profile on Playo to connect for a match!</p>
-    <p><a href="https://playo.co/profile/8625e805-7084-4032-8793-17e028ef1648" target="_blank">Playo Profile</a></p>
-  </details>
-
-  <details>
-    <summary>🎶 Music and Keys</summary>
-    <p>I unwind with melodies. From film songs to fusion covers — here’s a clip of me on the keyboard!</p>
-    <p><a href="https://www.instagram.com/reel/YOUR_REEL_ID/" target="_blank">Watch on Instagram 🎹</a></p>
-  </details>
-
-  <details>
-    <summary>🏆 Favourite Sports Team</summary>
-    <p>RCB fan forever — and finally, they’ve done it!</p>
-    <img src="About_me/rcb_champions.jpg" alt="RCB lifting trophy">
-    <p style="font-style: italic; color: #ff7979;">"Ee sala cup namde… and this time, it's for real! 🏆🔥"</p>
-  </details>
-</div>
-
-<script>
-  function toggleMenu() {
-    const nav = document.getElementById("navLinks");
-    nav.classList.toggle("show");
-  }
-</script>
-
+  <script>
+    function toggleMenu() {
+      document.getElementById("navbarLinks").classList.toggle("show");
+    }
+  </script>
 </body>
 </html>
