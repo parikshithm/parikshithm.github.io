@@ -5,7 +5,7 @@
   <title>Resume - Parikshith M</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="favicon.ico">
-
+  
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
@@ -15,6 +15,7 @@
       color: #f1f1f1;
     }
 
+    /* Navigation */
     nav {
       background-color: #121212;
       padding: 15px 20px;
@@ -22,18 +23,20 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      position: relative;
+      flex-wrap: wrap;
     }
 
     .nav-links {
       display: flex;
-      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
     }
 
     .nav-links a {
       color: #ff5252;
       font-weight: bold;
       font-size: 18px;
+      margin: 10px 20px;
       text-decoration: none;
       transition: color 0.3s, transform 0.3s;
     }
@@ -45,15 +48,11 @@
 
     .hamburger {
       display: none;
-      flex-direction: column;
-      gap: 5px;
+      font-size: 26px;
+      background: none;
+      border: none;
+      color: #ff5252;
       cursor: pointer;
-    }
-
-    .hamburger div {
-      width: 25px;
-      height: 3px;
-      background-color: #ff5252;
     }
 
     .content {
@@ -61,10 +60,6 @@
       margin: 40px auto;
       padding: 0 20px;
       text-align: center;
-    }
-
-    a {
-      color: #ff5252;
     }
 
     .btn {
@@ -119,73 +114,69 @@
     }
 
     @media (max-width: 600px) {
-      .hamburger {
-        display: flex;
+      .nav-links {
+        flex-direction: column;
+        width: 100%;
+        display: none;
       }
 
-      .nav-links {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        right: 0;
-        background-color: #121212;
-        padding: 15px 0;
-        border-top: 1px solid #ff1744;
-        z-index: 1000;
+      .nav-links a {
+        margin: 10px 0;
+      }
+
+      .hamburger {
+        display: block;
       }
 
       .nav-links.show {
         display: flex;
       }
 
-      .nav-links a {
-        margin: 10px 0;
-        font-size: 17px;
+      .content {
+        padding: 30px 15px;
+      }
+
+      .contact-section {
+        margin: 40px 15px;
       }
     }
   </style>
 </head>
 <body>
 
-  <nav>
-    <div class="hamburger" onclick="toggleMenu()">
-      <div></div>
-      <div></div>
-      <div></div>
-    </div>
-    <div class="nav-links" id="navLinks">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="projects.html">Projects</a>
-      <a href="resume.html">Resume</a>
-      <!-- <a href="blog.html">Blog</a> -->
-    </div>
-  </nav>
-
-  <div class="content">
-    <h1>📄 Resume</h1>
-    <p>Click the button below to download my resume:</p>
-    <a href="Parikshith_M_Resume.pdf" class="btn" download>Download Resume</a>
+<nav>
+  <button class="hamburger" onclick="toggleMenu()">☰</button>
+  <div class="nav-links" id="navMenu">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="projects.html">Projects</a>
+    <a href="resume.html">Resume</a>
+    <!-- <a href="blog.html">Blog</a> -->
   </div>
+</nav>
 
-  <div class="contact-section">
-    <h2>📫 Contact Me</h2>
-    <form action="https://formspree.io/f/moqzqzep" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="_replyto" placeholder="Your Email" required>
-      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-      <button type="submit" class="btn">Send</button>
-    </form>
-  </div>
+<div class="content">
+  <h1>📄 Resume</h1>
+  <p>Click the button below to download my resume:</p>
+  <a href="Parikshith_M_Resume.pdf" class="btn" download>Download Resume</a>
+</div>
 
-  <script>
-    function toggleMenu() {
-      const nav = document.getElementById("navLinks");
-      nav.classList.toggle("show");
-    }
-  </script>
+<div class="contact-section">
+  <h2>📫 Contact Me</h2>
+  <form action="https://formspree.io/f/moqzqzep" method="POST">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="_replyto" placeholder="Your Email" required>
+    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+    <button type="submit" class="btn">Send</button>
+  </form>
+</div>
+
+<script>
+  function toggleMenu() {
+    const nav = document.getElementById("navMenu");
+    nav.classList.toggle("show");
+  }
+</script>
 
 </body>
 </html>
