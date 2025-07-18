@@ -6,177 +6,115 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="favicon.ico">
   
-  <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #000;
-      color: #f1f1f1;
-    }
+<style>
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    color: #f1f1f1;
+  }
 
-    /* Navigation */
-    nav {
-      background-color: #121212;
-      padding: 15px 20px;
-      border-bottom: 2px solid #ff1744;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-    }
+  header {
+    background-color: #121212;
+    border-bottom: 2px solid #ff1744;
+  }
 
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+  }
+
+  .nav-logo {
+    font-weight: bold;
+    color: #ff5252;
+    font-size: 20px;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 20px;
+  }
+
+  .nav-links a {
+    color: #ff5252;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s, transform 0.3s;
+  }
+
+  .nav-links a:hover {
+    color: #ffffff;
+    transform: scale(1.1);
+  }
+
+  .menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+  }
+
+  .menu-toggle span {
+    height: 3px;
+    width: 25px;
+    background-color: #ff5252;
+    margin: 4px 0;
+    transition: all 0.3s ease;
+  }
+
+  @media (max-width: 768px) {
     .nav-links {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-
-    .nav-links a {
-      color: #ff5252;
-      font-weight: bold;
-      font-size: 18px;
-      margin: 10px 20px;
-      text-decoration: none;
-      transition: color 0.3s, transform 0.3s;
-    }
-
-    .nav-links a:hover {
-      color: #ffffff;
-      transform: scale(1.1);
-    }
-
-    .hamburger {
       display: none;
-      font-size: 26px;
-      background: none;
-      border: none;
-      color: #ff5252;
-      cursor: pointer;
-    }
-
-    .content {
-      max-width: 800px;
-      margin: 40px auto;
-      padding: 0 20px;
-      text-align: center;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 10px 20px;
-      background-color: #ff1744;
-      color: white;
-      text-decoration: none;
-      border-radius: 5px;
-      font-weight: bold;
-      transition: background-color 0.3s;
-      margin-top: 10px;
-    }
-
-    .btn:hover {
-      background-color: #d50000;
-    }
-
-    .contact-section {
-      max-width: 600px;
-      margin: 60px auto 40px;
-      background-color: #121212;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(255,82,82,0.1);
-    }
-
-    .contact-section h2 {
-      color: #ffffff;
-      margin-bottom: 20px;
-    }
-
-    form input,
-    form textarea {
+      flex-direction: column;
       width: 100%;
-      padding: 12px;
-      margin: 10px 0;
-      border-radius: 5px;
-      border: none;
-      font-size: 16px;
-      background-color: #1c1c1c;
-      color: #fff;
+      background-color: #121212;
+      position: absolute;
+      top: 60px;
+      left: 0;
     }
 
-    form input:focus,
-    form textarea:focus {
-      outline: 2px solid #ff5252;
+    .nav-links.active {
+      display: flex;
     }
 
-    button.btn {
-      cursor: pointer;
+    .menu-toggle {
+      display: flex;
     }
-
-    @media (max-width: 600px) {
-      .nav-links {
-        flex-direction: column;
-        width: 100%;
-        display: none;
-      }
-
-      .nav-links a {
-        margin: 10px 0;
-      }
-
-      .hamburger {
-        display: block;
-      }
-
-      .nav-links.show {
-        display: flex;
-      }
-
-      .content {
-        padding: 30px 15px;
-      }
-
-      .contact-section {
-        margin: 40px 15px;
-      }
-    }
-  </style>
-</head>
-<body>
-
-<nav>
-  <button class="hamburger" onclick="toggleMenu()">☰</button>
-  <div class="nav-links" id="navMenu">
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="projects.html">Projects</a>
-    <a href="resume.html">Resume</a>
-    <!-- <a href="blog.html">Blog</a> -->
-  </div>
-</nav>
-
-<div class="content">
-  <h1>📄 Resume</h1>
-  <p>Click the button below to download my resume:</p>
-  <a href="Parikshith_M_Resume.pdf" class="btn" download>Download Resume</a>
-</div>
-
-<div class="contact-section">
-  <h2>📫 Contact Me</h2>
-  <form action="https://formspree.io/f/moqzqzep" method="POST">
-    <input type="text" name="name" placeholder="Your Name" required>
-    <input type="email" name="_replyto" placeholder="Your Email" required>
-    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-    <button type="submit" class="btn">Send</button>
-  </form>
-</div>
-
+  }
+</style>
 <script>
   function toggleMenu() {
-    const nav = document.getElementById("navMenu");
-    nav.classList.toggle("show");
+    document.getElementById('navLinks').classList.toggle('active');
   }
 </script>
 
+</head>
+<body>
+
+<header>
+  <div class="nav-container">
+    <div class="nav-logo">Parikshith M</div>
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="resume.html">Resume</a>
+    </div>
+  </div>
+</header>
+
+<div style="max-width: 800px; margin: 40px auto; padding: 0 20px; text-align: center;">
+  <h1>📄 Resume</h1>
+  <p>Click the button below to download my resume:</p>
+  <a href="Parikshith_M_Resume.pdf" style="display:inline-block; padding:10px 20px; background-color:#ff1744; color:white; text-decoration:none; border-radius:5px;">Download Resume</a>
+</div>
 </body>
 </html>

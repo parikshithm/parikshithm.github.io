@@ -5,132 +5,114 @@
   <title>Projects - Parikshith M</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="favicon.ico">
-  <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      margin: 0;
-      padding: 0 20px;
-      background-color: #000;
-      color: #f1f1f1;
-    }
+  
+<style>
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    color: #f1f1f1;
+  }
 
-    /* Navigation styles */
-    nav {
-      background-color: #121212;
-      padding: 15px 20px;
-      border-bottom: 2px solid #ff1744;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-    }
+  header {
+    background-color: #121212;
+    border-bottom: 2px solid #ff1744;
+  }
 
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+  }
+
+  .nav-logo {
+    font-weight: bold;
+    color: #ff5252;
+    font-size: 20px;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 20px;
+  }
+
+  .nav-links a {
+    color: #ff5252;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s, transform 0.3s;
+  }
+
+  .nav-links a:hover {
+    color: #ffffff;
+    transform: scale(1.1);
+  }
+
+  .menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+  }
+
+  .menu-toggle span {
+    height: 3px;
+    width: 25px;
+    background-color: #ff5252;
+    margin: 4px 0;
+    transition: all 0.3s ease;
+  }
+
+  @media (max-width: 768px) {
     .nav-links {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-
-    .nav-links a {
-      color: #ff5252;
-      font-weight: bold;
-      font-size: 18px;
-      margin: 10px 20px;
-      text-decoration: none;
-      transition: color 0.3s, transform 0.3s;
-    }
-
-    .nav-links a:hover {
-      color: #ffffff;
-      transform: scale(1.1);
-    }
-
-    .hamburger {
       display: none;
-      font-size: 26px;
-      background: none;
-      border: none;
-      color: #ff5252;
-      cursor: pointer;
+      flex-direction: column;
+      width: 100%;
+      background-color: #121212;
+      position: absolute;
+      top: 60px;
+      left: 0;
     }
 
-    .content {
-      max-width: 900px;
-      margin: auto;
-      padding-top: 30px;
+    .nav-links.active {
+      display: flex;
     }
 
-    a {
-      color: #ff5252;
+    .menu-toggle {
+      display: flex;
     }
+  }
+</style>
+<script>
+  function toggleMenu() {
+    document.getElementById('navLinks').classList.toggle('active');
+  }
+</script>
 
-    details {
-      background-color: #1a1a1a;
-      padding: 15px;
-      margin: 20px 0;
-      border-radius: 8px;
-      border-left: 4px solid #ff5252;
-      animation: slideIn 0.4s ease-in-out;
-    }
-
-    summary {
-      font-size: 18px;
-      font-weight: bold;
-      cursor: pointer;
-      color: #ff5252;
-    }
-
-    summary:hover {
-      color: #ffffff;
-    }
-
-    ul {
-      margin-top: 10px;
-      line-height: 1.8;
-    }
-
-    @keyframes slideIn {
-      0% { opacity: 0; transform: translateX(-15px); }
-      100% { opacity: 1; transform: translateX(0); }
-    }
-
-    @media (max-width: 600px) {
-      .nav-links {
-        flex-direction: column;
-        width: 100%;
-        display: none;
-      }
-
-      .nav-links a {
-        margin: 10px 0;
-      }
-
-      .hamburger {
-        display: block;
-      }
-
-      .nav-links.show {
-        display: flex;
-      }
-    }
-  </style>
 </head>
 <body>
 
-<nav>
-  <button class="hamburger" onclick="toggleMenu()">☰</button>
-  <div class="nav-links" id="navMenu">
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="projects.html">Projects</a>
-    <a href="resume.html">Resume</a>
-    <!-- <a href="blog.html">Blog</a> -->
+<header>
+  <div class="nav-container">
+    <div class="nav-logo">Parikshith M</div>
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="resume.html">Resume</a>
+    </div>
   </div>
-</nav>
+</header>
 
-<div class="content">
+<div style="max-width: 900px; margin: auto; padding: 40px 20px;">
   <h1>Projects</h1>
-
   <details>
     <summary>📊 Data Dashboard for Retail Insights</summary>
     <ul>
@@ -138,43 +120,6 @@
       <li>Built with Power BI, Excel, SQL</li>
     </ul>
   </details>
-
-  <details>
-    <summary>🤖 AI Chatbot for Lead Generation</summary>
-    <ul>
-      <li>Developed a conversational AI chatbot for website lead capture</li>
-      <li>Built using Dialogflow + Firebase + CRM integration</li>
-    </ul>
-  </details>
-
-  <details>
-    <summary>📱 Wedding Services Mobile App (Flutter + Firebase)</summary>
-    <ul>
-      <li>Platform connecting customers with wedding service providers</li>
-      <li>Developed with Flutter and Firebase backend</li>
-    </ul>
-  </details>
-
-  <details open>
-    <summary>📈 Funnel Analysis of Google Merchandise Store</summary>
-    <p>This project analyzes user drop-offs at each stage of the e-commerce funnel (Session → Product View → Add to Cart → Checkout → Purchase) using Google Analytics 4 (GA4) data. Built using Power BI for visualization, Python for transformation, and DAX for advanced calculations. The goal was to identify stages where user conversion drops significantly and suggest improvements.</p>
-    <ul>
-      <li><a href="Projects/Funnel_Analysis/Funnel Analysis of Google Merchandise store.pdf" target="_blank">📄 PDF Report</a></li>
-      <li><a href="Projects/Funnel_Analysis/Funnel analysis.pbix" target="_blank">📊 Power BI File</a></li>
-      <li><a href="Projects/Funnel_Analysis/Product_Funnel_Analysis.ipynb" target="_blank">📓 Jupyter Notebook</a></li>
-      <li><a href="Projects/Funnel_Analysis/category_funnel.csv" target="_blank">📂 Category Funnel CSV</a></li>
-      <li><a href="Projects/Funnel_Analysis/overall_funnel.csv" target="_blank">📂 Overall Funnel CSV</a></li>
-      <li><a href="Projects/Funnel_Analysis/Funnel_Analysis_Google_Store.png" target="_blank">🖼️ Dashboard Snapshot</a></li>
-    </ul>
-  </details>
 </div>
-
-<script>
-  function toggleMenu() {
-    const nav = document.getElementById("navMenu");
-    nav.classList.toggle("show");
-  }
-</script>
-
 </body>
 </html>

@@ -5,183 +5,115 @@
   <title>About - Parikshith M</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="favicon.ico">
-  <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      margin: 0;
-      padding: 0 20px;
-      background-color: #000;
-      color: #f1f1f1;
-    }
+  
+<style>
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    color: #f1f1f1;
+  }
 
-    .navbar {
-      background-color: #121212;
-      border-bottom: 2px solid #ff1744;
-      padding: 15px;
-      position: relative;
-    }
+  header {
+    background-color: #121212;
+    border-bottom: 2px solid #ff1744;
+  }
 
-    .navbar .menu-icon {
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+  }
+
+  .nav-logo {
+    font-weight: bold;
+    color: #ff5252;
+    font-size: 20px;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 20px;
+  }
+
+  .nav-links a {
+    color: #ff5252;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s, transform 0.3s;
+  }
+
+  .nav-links a:hover {
+    color: #ffffff;
+    transform: scale(1.1);
+  }
+
+  .menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+  }
+
+  .menu-toggle span {
+    height: 3px;
+    width: 25px;
+    background-color: #ff5252;
+    margin: 4px 0;
+    transition: all 0.3s ease;
+  }
+
+  @media (max-width: 768px) {
+    .nav-links {
       display: none;
-      font-size: 26px;
-      color: #ff5252;
-      cursor: pointer;
-    }
-
-    .navbar-links {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-
-    .navbar-links a {
-      color: #ff5252;
-      font-weight: bold;
-      font-size: 18px;
-      margin: 10px 20px;
-      text-decoration: none;
-      transition: color 0.3s, transform 0.3s;
-    }
-
-    .navbar-links a:hover {
-      color: #ffffff;
-      transform: scale(1.1);
-    }
-
-    .content {
-      max-width: 800px;
-      margin: auto;
-      padding-top: 30px;
-    }
-
-    img, video {
+      flex-direction: column;
       width: 100%;
-      max-width: 400px;
-      border-radius: 8px;
-      margin-top: 10px;
-      display: block;
-      animation: fadeIn 1.5s ease-in-out;
+      background-color: #121212;
+      position: absolute;
+      top: 60px;
+      left: 0;
     }
 
-    details {
-      background-color: #1a1a1a;
-      padding: 15px;
-      border-radius: 8px;
-      margin-bottom: 20px;
-      transition: transform 0.3s ease;
-      animation: slideIn 0.6s ease-in-out;
+    .nav-links.active {
+      display: flex;
     }
 
-    summary {
-      font-size: 18px;
-      font-weight: bold;
-      color: #ff7979;
-      cursor: pointer;
+    .menu-toggle {
+      display: flex;
     }
+  }
+</style>
+<script>
+  function toggleMenu() {
+    document.getElementById('navLinks').classList.toggle('active');
+  }
+</script>
 
-    @keyframes fadeIn {
-      0% { opacity: 0; transform: translateY(10px); }
-      100% { opacity: 1; transform: translateY(0); }
-    }
-
-    @keyframes slideIn {
-      0% { opacity: 0; transform: translateX(-20px); }
-      100% { opacity: 1; transform: translateX(0); }
-    }
-
-    @media (max-width: 768px) {
-      .navbar-links {
-        display: none;
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .navbar .menu-icon {
-        display: block;
-        position: absolute;
-        top: 18px;
-        right: 20px;
-      }
-
-      .navbar-links.show {
-        display: flex;
-      }
-
-      .navbar-links a {
-        margin: 10px 0;
-      }
-    }
-  </style>
 </head>
 <body>
-  <div class="navbar">
-    <span class="menu-icon" onclick="toggleMenu()">☰</span>
-    <div class="navbar-links" id="navbarLinks">
+
+<header>
+  <div class="nav-container">
+    <div class="nav-logo">Parikshith M</div>
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div class="nav-links" id="navLinks">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="projects.html">Projects</a>
       <a href="resume.html">Resume</a>
-      <!-- <a href="blog.html">Blog</a> -->
     </div>
   </div>
+</header>
 
-  <div class="content">
-    <h1>About Me</h1>
-    <p>I’m a tech-savvy MBA graduate passionate about solving business problems using data, strategy, and smart technology.
-    I’m also a fitness enthusiast who spends free time engaging in sports and creative hobbies.</p>
-
-    <details>
-      <summary>🎓 Education</summary>
-      <p><strong>MBA</strong> — Great Lakes Institute of Management, Chennai (Data Science & Marketing)</p>
-      <p><strong>B.E.</strong> — Siddaganga Institute of Technology, Tumkur (Electronics and Communication)</p>
-    </details>
-
-    <details>
-      <summary>♟️ Chess Enthusiast</summary>
-      <p>I love the game of strategy. Whether opening with the Queen's Gambit or defending a drawn-out endgame, chess sharpens my thinking.</p>
-      <p>Check out my profile: <a href="https://www.chess.com/member/pari11" target="_blank">chess.com/pari11</a></p>
-    </details>
-
-    <details>
-      <summary>🏏 Cricket Club Player</summary>
-      <p>Weekend warrior with a straight drive to admire! I play for a local cricket club that brings friends, fun, and fierce competition together.</p>
-      <p>Follow my team on Instagram: <a href="https://www.instagram.com/united_engineers_cricket_club/" target="_blank">@united_engineers_cricket_club</a></p>
-    </details>
-
-    <details>
-      <summary>🏓 Pickleball Addict</summary>
-      <p>Fast, fun, and always a smash! Pickleball is my latest addiction — here are some action shots of me on the court.</p>
-      <img src="About_me/pickleball1.jpg" alt="Pickleball photo 1">
-      <video controls>
-        <source src="About_me/pickleball2.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-    </details>
-
-    <details>
-      <summary>🏸 Badminton Hustler</summary>
-      <p>Catch me diving across courts and smashing with precision. Here's my profile on Playo to connect for a match!</p>
-      <p><a href="https://playo.co/profile/8625e805-7084-4032-8793-17e028ef1648" target="_blank">Playo Profile</a></p>
-    </details>
-
-    <details>
-      <summary>🎶 Music and Keys</summary>
-      <p>I unwind with melodies. From film songs to fusion covers — here’s a clip of me on the keyboard!</p>
-      <p><a href="https://www.instagram.com/reel/YOUR_REEL_ID/" target="_blank">Watch on Instagram 🎹</a></p>
-    </details>
-
-    <details>
-      <summary>🏆 Favourite Sports Team</summary>
-      <p>RCB fan forever — and finally, they’ve done it!</p>
-      <img src="About_me/rcb_champions.jpg" alt="RCB lifting trophy">
-      <p style="font-style: italic; color: #ff7979;">"Ee sala cup namde… and this time, it's for real! 🏆🔥"</p>
-    </details>
-  </div>
-
-  <script>
-    function toggleMenu() {
-      document.getElementById("navbarLinks").classList.toggle("show");
-    }
-  </script>
+<div style="max-width: 800px; margin: auto; padding: 40px 20px;">
+  <h1>About Me</h1>
+  <p>I’m a tech-savvy MBA graduate passionate about solving business problems using data, strategy, and smart technology.</p>
+</div>
 </body>
 </html>
