@@ -24,16 +24,30 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      flex-wrap: wrap;
-      padding: 15px 20px;
       position: relative;
+      padding: 15px 20px;
+    }
+
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      position: absolute;
+      left: 20px;
+      top: 15px;
+    }
+
+    .menu-toggle span {
+      height: 3px;
+      width: 25px;
+      background-color: #ff5252;
+      margin: 4px 0;
+      transition: all 0.3s ease;
     }
 
     .nav-links {
       display: flex;
       gap: 20px;
-      flex-wrap: wrap;
-      justify-content: center;
     }
 
     .nav-links a {
@@ -47,23 +61,6 @@
     .nav-links a:hover {
       color: #ffffff;
       transform: scale(1.1);
-    }
-
-    .menu-toggle {
-      display: none;
-      flex-direction: column;
-      cursor: pointer;
-      position: absolute;
-      right: 20px;
-      top: 18px;
-    }
-
-    .menu-toggle span {
-      height: 3px;
-      width: 25px;
-      background-color: #ff5252;
-      margin: 4px 0;
-      transition: all 0.3s ease;
     }
 
     .content {
@@ -134,11 +131,18 @@
         flex-direction: column;
         width: 100%;
         background-color: #121212;
-        margin-top: 15px;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 10px 0;
       }
 
       .nav-links.active {
         display: flex;
+      }
+
+      .nav-links a {
+        padding: 10px 20px;
       }
     }
   </style>
@@ -173,4 +177,15 @@
     <input type="text" name="name" placeholder="Your Name" required>
     <input type="email" name="_replyto" placeholder="Your Email" required>
     <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-    <button type="submit" class="btn">S
+    <button type="submit" class="btn">Send</button>
+  </form>
+</div>
+
+<script>
+  function toggleMenu() {
+    document.getElementById('navLinks').classList.toggle('active');
+  }
+</script>
+
+</body>
+</html>
