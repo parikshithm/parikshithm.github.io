@@ -1,3 +1,4 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +7,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Welcome to the official website of Parikshith M — MBA graduate blending business strategy with technology.">
   <link rel="icon" href="favicon.ico">
-
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
@@ -16,14 +16,20 @@
       color: #f1f1f1;
     }
 
-    nav {
+    .navbar {
       background-color: #121212;
-      padding: 15px 20px;
       border-bottom: 2px solid #ff1744;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      position: relative;
+      padding: 15px 20px;
+    }
+
+    .navbar a.logo {
+      color: #ff5252;
+      font-weight: bold;
+      font-size: 20px;
+      text-decoration: none;
     }
 
     .nav-links {
@@ -39,8 +45,7 @@
       transition: color 0.3s, transform 0.3s;
     }
 
-    .nav-links a:hover,
-    .nav-links a:focus {
+    .nav-links a:hover {
       color: #ffffff;
       transform: scale(1.1);
     }
@@ -49,14 +54,33 @@
       display: none;
       flex-direction: column;
       cursor: pointer;
-      gap: 5px;
     }
 
     .hamburger div {
       width: 25px;
       height: 3px;
       background-color: #ff5252;
-      transition: 0.3s;
+      margin: 4px 0;
+    }
+
+    .mobile-menu {
+      display: none;
+      flex-direction: column;
+      background-color: #121212;
+      text-align: center;
+      padding: 10px 0;
+    }
+
+    .mobile-menu a {
+      color: #ff5252;
+      font-weight: bold;
+      font-size: 18px;
+      margin: 10px 0;
+      text-decoration: none;
+    }
+
+    .mobile-menu a:hover {
+      color: #ffffff;
     }
 
     .container {
@@ -79,58 +103,48 @@
       line-height: 1.6;
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 600px) {
+      .nav-links {
+        display: none;
+      }
+
       .hamburger {
         display: flex;
       }
 
-      .nav-links {
+      .mobile-menu {
         display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        right: 0;
-        background-color: #121212;
-        padding: 15px 0;
-        border-top: 1px solid #ff1744;
       }
 
-      .nav-links.show {
+      .mobile-menu.active {
         display: flex;
-      }
-
-      .nav-links a {
-        margin: 10px 0;
-        font-size: 17px;
-      }
-
-      .profile-img {
-        width: 130px;
-      }
-
-      .container {
-        padding: 30px 15px;
       }
     }
   </style>
 </head>
 <body>
 
-  <nav>
+  <div class="navbar">
+    <a href="index.html" class="logo">Parikshith M</a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="resume.html">Resume</a>
+    </div>
     <div class="hamburger" onclick="toggleMenu()">
       <div></div>
       <div></div>
       <div></div>
     </div>
-    <div class="nav-links" id="navLinks">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="projects.html">Projects</a>
-      <a href="resume.html">Resume</a>
-      <!-- <a href="blog.html">Blog</a> -->
-    </div>
-  </nav>
+  </div>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="projects.html">Projects</a>
+    <a href="resume.html">Resume</a>
+  </div>
 
   <div class="container">
     <h1>Hi, I'm Parikshith 👋</h1>
@@ -144,8 +158,8 @@
 
   <script>
     function toggleMenu() {
-      const nav = document.getElementById("navLinks");
-      nav.classList.toggle("show");
+      const menu = document.getElementById("mobileMenu");
+      menu.classList.toggle("active");
     }
   </script>
 
