@@ -15,26 +15,24 @@
     }
 
     nav {
-  background-color: #121212;
-  border-bottom: 2px solid #ff1744;
-  height: 60px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-}
-
+      background-color: #121212;
+      border-bottom: 2px solid #ff1744;
+      height: 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
 
     .menu-toggle {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-  position: absolute;
-  left: 20px;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      position: absolute;
+      left: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
 
     .menu-toggle span {
       height: 3px;
@@ -50,13 +48,13 @@
     }
 
     .nav-links a {
-  color: #ff5252;
-  font-weight: bold;
-  font-size: 18px;
-  margin: 10px 20px;
-  text-decoration: none;
-  transition: color 0.3s, transform 0.3s;
-   }
+      color: #ff5252;
+      font-weight: bold;
+      font-size: 18px;
+      margin: 10px 20px;
+      text-decoration: none;
+      transition: color 0.3s, transform 0.3s;
+    }
 
     .nav-links a:hover {
       color: #ffffff;
@@ -103,39 +101,38 @@
       100% { opacity: 1; transform: translateX(0); }
     }
 
-   @media (max-width: 768px) {
-  nav {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 15px 20px;
-  }
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px 20px;
+      }
 
-  .menu-toggle {
-    display: flex;
-    z-index: 2;
-  }
+      .menu-toggle {
+        display: flex;
+        z-index: 2;
+      }
 
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 58px;
-    left: 0;
-    width: 100%;
-    background-color: #121212;
-    padding: 10px 20px;
-    z-index: 1;
-  }
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 58px;
+        left: 0;
+        width: 100%;
+        background-color: #121212;
+        padding: 10px 20px;
+        z-index: 1;
+      }
 
-  .nav-links.active {
-    display: flex;
-  }
+      .nav-links.active {
+        display: flex;
+      }
 
-  .nav-links a {
-    margin: 10px 0;
-  }
-}
-
+      .nav-links a {
+        margin: 10px 0;
+      }
+    }
   </style>
 </head>
 <body>
@@ -193,6 +190,15 @@
       <li><a href="Projects/Funnel_Analysis/Funnel_Analysis_Google_Store.png" target="_blank">🖼️ Dashboard Snapshot</a></li>
     </ul>
   </details>
+
+  <details>
+    <summary>🛒 Product Teardown: Samsung D2C App</summary>
+    <p>A comprehensive teardown analyzing the Samsung Direct-to-Consumer (D2C) Shop app’s user experience, pain points, feature gaps, and improvement opportunities. Includes metrics, UI observations, and proposed feature enhancements.</p>
+    <ul>
+      <li><a href="Projects/Samsung_D2C/Samsung D2C App.pdf" target="_blank">📄 PDF Report</a></li>
+    </ul>
+  </details>
+
 </div>
 
 <script>
